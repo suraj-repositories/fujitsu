@@ -9,8 +9,16 @@
 
 ## Package MLM
 
-### Added Lib's
+### Externals
 
-- Ziggy
-- Yajra DataTable
+#### Technologies
+- [Laravel 12](https://laravel.com/docs/12.x/releases)
+- [Tailwind](https://tailwindcss.com/)
+
+#### Templates
+- [zynix](https://laravelui.spruko.com/tailwind/zynix/index)
+
+#### Libraries
+- [Ziggy](https://github.com/tighten/ziggy)
+- [Yajra DataTable](https://github.com/yajra/laravel-datatables)
 
