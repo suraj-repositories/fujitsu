@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-nav-layout="vertical" class="light" data-header-styles="light" data-menu-styles="light" data-width="fullwidth" data-toggled="close">
 
-    
+
 <!-- Mirrored from laravelui.spruko.com/tailwind/zynix/index by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jun 2025 21:27:42 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
@@ -13,13 +13,13 @@
         <meta name="Description" content="Laravel Tailwind Responsive Admin Web Dashboard Template">
         <meta name="Author" content="Spruko Technologies Private Limited">
         <meta name="keywords" content="admin dashboard laravel, dashboard for laravel, laravel components, laravel dashboards, laravel firebase, laravel tailwind admin template, laravel tailwind template, laravel template, laravel template admin, laravel ui, tailwind framework, tailwind ui dashboard, tailwind css laravel, tailwind css ui, tailwind ui dashboard.">
-    
+
         <!-- Title-->
         <title> Zynix - Laravel Tailwind Premium Admin & Dashboard Template </title>
-        
+
         <!-- Favicon -->
         <link rel="icon" href="build/assets/images/brand-logos/favicon.ico" type="image/x-icon">
-    
+
         <!-- Main Theme Js -->
         <script src="build/assets/main.js"></script>
 
@@ -30,11 +30,11 @@
         <script src="build/assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
 
         <!-- Node Waves Css -->
-        <link href="build/assets/libs/node-waves/waves.min.css" rel="stylesheet" > 
+        <link href="build/assets/libs/node-waves/waves.min.css" rel="stylesheet" >
 
         <!-- Simplebar Css -->
         <link href="build/assets/libs/simplebar/simplebar.min.css" rel="stylesheet" >
-        
+
         <!-- Color Picker Css -->
         <link rel="stylesheet" href="build/assets/libs/%40simonwep/pickr/themes/nano.min.css">
 
@@ -46,14 +46,15 @@
 
         <!-- Auto Complete CSS -->
         <link rel="stylesheet" href="build/assets/libs/%40tarekraafat/autocomplete.js/css/autoComplete.css">
-      
+
         <!-- APP CSS & APP SCSS -->
         <link rel="preload" as="style" href="build/assets/app-0uaTFK0y.css" /><link rel="stylesheet" href="build/assets/app-0uaTFK0y.css" />
-        
+
         <!-- FlatPickr CSS -->
         <link rel="stylesheet" href="build/assets/libs/flatpickr/flatpickr.min.css">
 
-        
+        @routes
+
     </head>
 
     <body class="">
@@ -1744,7 +1745,7 @@
 												<a href="create-password-cover.html" class="side-menu__item">Cover</a>
 											</li>
 										</ul>
-									</li>      
+									</li>
 									<li class="slide has-sub">
 										<a href="javascript:void(0);" class="side-menu__item">Lock Screen
 											<i class="ri-arrow-right-s-line side-menu__angle"></i></a>
@@ -1756,7 +1757,7 @@
 												<a href="lockscreen-cover.html" class="side-menu__item">Cover</a>
 											</li>
 										</ul>
-									</li>     
+									</li>
 									<li class="slide has-sub">
 										<a href="javascript:void(0);" class="side-menu__item">Reset Password
 											<i class="ri-arrow-right-s-line side-menu__angle"></i></a>
@@ -1768,7 +1769,7 @@
 												<a href="reset-password-cover.html" class="side-menu__item">Cover</a>
 											</li>
 										</ul>
-									</li>     
+									</li>
 									<li class="slide has-sub">
 										<a href="javascript:void(0);" class="side-menu__item">Sign Up
 											<i class="ri-arrow-right-s-line side-menu__angle"></i></a>
@@ -1780,7 +1781,7 @@
 												<a href="sign-up-cover.html" class="side-menu__item">Cover</a>
 											</li>
 										</ul>
-									</li>  
+									</li>
 									<li class="slide has-sub">
 										<a href="javascript:void(0);" class="side-menu__item">Sign In
 											<i class="ri-arrow-right-s-line side-menu__angle"></i></a>
@@ -1792,7 +1793,7 @@
 												<a href="sign-in-cover.html" class="side-menu__item">Cover</a>
 											</li>
 										</ul>
-									</li> 
+									</li>
 									<li class="slide has-sub">
 										<a href="javascript:void(0);" class="side-menu__item">Two Step Verification
 											<i class="ri-arrow-right-s-line side-menu__angle"></i></a>
@@ -1804,7 +1805,7 @@
 												<a href="two-step-verification-cover.html" class="side-menu__item">Cover</a>
 											</li>
 										</ul>
-									</li> 
+									</li>
 									<li class="slide">
 										<a href="under-maintenance.html" class="side-menu__item">Under Maintenance</a>
 									</li>
@@ -1971,7 +1972,7 @@
 											</li>
 											<li class="slide">
 												<a href="form-range.html" class="side-menu__item">Range Slider</a>
-											</li>    
+											</li>
 											<li class="slide">
 												<a href="form-input-masks.html" class="side-menu__item">Input Masks</a>
 											</li>
@@ -2187,7 +2188,7 @@
 								</a>
 							</li>
 							<!-- End::slide -->
-					
+
 							<!-- Start::slide__category -->
 							<li class="slide__category"><span class="category-name">Tools & Components</span></li>
 							<!-- End::slide__category -->
@@ -2348,7 +2349,7 @@
             <div class="main-content app-content">
                 <div class="container-fluid">
 
-                    	
+
                     <!-- Start::page-header -->
                     <div class="flex items-center justify-between page-header-breadcrumb flex-wrap gap-2">
                         <div>
@@ -3437,7 +3438,7 @@
                     </div>
                     <!-- End:: row-3 -->
 
-                    
+
                 </div>
             </div>
             <!-- End::content  -->
@@ -3446,9 +3447,9 @@
             <footer class="mt-auto py-4 bg-white dark:bg-bodybg text-center border-t border-defaultborder dark:border-defaultborder/10">
 				<div class="container">
 					<span class="text-textmuted dark:text-textmuted/50">
-						Copyright © <span id="year"></span> 
+						Copyright © <span id="year"></span>
 						<a href="javascript:void(0);" class="text-dark font-medium dark:text-defaulttextcolor/80">Zynix</a>.
-						Designed with <span class="bi bi-heart-fill text-danger"></span> by 
+						Designed with <span class="bi bi-heart-fill text-danger"></span> by
 						<a href="https://spruko.com/" target="_blank">
 							<span class="font-medium text-primary">Spruko</span>
 						</a>
@@ -3475,7 +3476,7 @@
                 </div>
             </div>            <!-- End::main-modal -->
 
-              
+
 
         </div>
 
@@ -3503,7 +3504,7 @@
          <script src="build/assets/libs/simplebar/simplebar.min.js"></script>
          <link rel="modulepreload" href="build/assets/simplebar-B35Aj-bA.js" />
 		 <script type="module" src="build/assets/simplebar-B35Aj-bA.js"></script>
-		 
+
          <!-- Auto Complete JS -->
          <script src="build/assets/libs/%40tarekraafat/autocomplete.js/autoComplete.min.js"></script>
 
@@ -3513,7 +3514,7 @@
          <!-- Date & Time Picker JS -->
          <script src="build/assets/libs/flatpickr/flatpickr.min.js"></script>
 
-         	
+
         <!-- Apex Charts JS -->
         <script src="build/assets/libs/apexcharts/apexcharts.min.js"></script>
 
@@ -3529,7 +3530,7 @@
         <link rel="modulepreload" href="build/assets/app-DQ-BRFdc.js" /><script type="module" src="build/assets/app-DQ-BRFdc.js"></script>
         <!-- END Scripts -->
 
-    </body> 
+    </body>
 
 
 <!-- Mirrored from laravelui.spruko.com/tailwind/zynix/index by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jun 2025 21:29:58 GMT -->
