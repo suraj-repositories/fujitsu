@@ -11,7 +11,6 @@
 
 ### Added Lib's
 
-```
-ziggy
+- Ziggy
+- Yajra DataTable
 
-```
