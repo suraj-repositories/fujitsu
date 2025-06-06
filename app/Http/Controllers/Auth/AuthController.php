@@ -22,24 +22,31 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-
         $validated = $request->validate([
-            'auth_uid' => 'userid|required|exists:users,userid',
-            'password' => 'required|min:3'
+            'auth_uid' => 'required|string|exists:users,userid',
+            'password' => 'required|string|min:3',
         ]);
 
         $user = User::where('userid', $validated['auth_uid'])->first();
+
         if ($user && Hash::check($validated['password'], $user->password)) {
             Auth::login($user);
 
-            if ($user->role == "admin") {
-                return redirect()->route('admin.dashboard')->with('success', 'Login successfull!');
+            switch ($user->role) {
+                case 'admin':
+                    return redirect()->route('admin.dashboard.index')->with('success', 'Login successful!');
+                case 'user':
+                    return redirect()->route('user.dashboard.index')->with('success', 'Login successful!');
+                case 'super_admin':
+                    return redirect()->route('superadmin.dashboard.index')->with('success', 'Login successful!');
+                default:
+                    return redirect('/')->with('warning', 'Role not recognized. Redirected to home.');
             }
-
-            return redirect("/")->with('success', 'Login successfull!');
         }
-        return redirect('/login')->with('error', 'Wrong Credentials');
+
+        return back()->withInput()->withErrors(['auth_uid' => 'Invalid credentials.']);
     }
+
 
     public function register(Request $request)
     {
@@ -72,6 +79,4 @@ class AuthController extends Controller
         }
         return redirect('/');
     }
-
-
 }

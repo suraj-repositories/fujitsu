@@ -86,15 +86,15 @@
                                             <div class="xl:col-span-12 col-span-12">
                                                 <label for="signup-auth-uid" class="ti-form-label text-dark">User Id</label>
                                                 <div class="relative">
-                                                    <input type="email" class="form-control form-control-lg"
-                                                        id="signup-auth-uid" placeholder="Enter User Id" name="auth_uid">
+                                                    <input type="text" class="form-control form-control-lg"
+                                                        id="signup-auth-uid" placeholder="Enter User Id" name="auth_uid" value="{{ old('auth_uid') }}">
                                                 </div>
                                             </div>
                                             <div class="xl:col-span-12 col-span-12 mb-2">
                                                 <label for="signin-password"
                                                     class="ti-form-label text-dark block">Password<a
                                                         href="reset-password-basic.html"
-                                                        class="float-end  link-danger opacity-50 !font-medium text-xs">Forget
+                                                        class="float-end link-danger opacity-50 !font-medium text-xs">Forget
                                                         password ?</a></label>
                                                 <div class="relative">
                                                     <input type="password" class="form-control form-control-lg"

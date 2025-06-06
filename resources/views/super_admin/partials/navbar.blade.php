@@ -10,12 +10,12 @@
 						<div class="header-element">
 							<div class="horizontal-logo">
 								<a href="index.html" class="header-logo">
-									<img src="build/assets/images/brand-logos/desktop-logo.png" alt="logo" class="desktop-logo">
-									<img src="build/assets/images/brand-logos/toggle-logo.png" alt="logo" class="toggle-logo">
-									<img src="build/assets/images/brand-logos/desktop-dark.png" alt="logo" class="desktop-dark">
-									<img src="build/assets/images/brand-logos/desktop-white.png" alt="logo" class="desktop-white">
-									<img src="build/assets/images/brand-logos/toggle-dark.png" alt="logo" class="toggle-dark">
-									<img src="build/assets/images/brand-logos/toggle-white.png" alt="logo" class="toggle-white">
+									<img src="/build/assets/images/brand-logos/desktop-logo.png" alt="logo" class="desktop-logo">
+									<img src="/build/assets/images/brand-logos/toggle-logo.png" alt="logo" class="toggle-logo">
+									<img src="/build/assets/images/brand-logos/desktop-dark.png" alt="logo" class="desktop-dark">
+									<img src="/build/assets/images/brand-logos/desktop-white.png" alt="logo" class="desktop-white">
+									<img src="/build/assets/images/brand-logos/toggle-dark.png" alt="logo" class="toggle-dark">
+									<img src="/build/assets/images/brand-logos/toggle-white.png" alt="logo" class="toggle-white">
 								</a>
 							</div>
 						</div>
@@ -108,7 +108,7 @@
 									<a class="ti-dropdown-item flex items-center justify-between" href="javascript:void(0);">
 										<div class="flex items-center">
 											<span class="avatar avatar-rounded avatar-xs leading-none me-2">
-												<img src="build/assets/images/flags/us_flag.jpg" alt="img">
+												<img src="/build/assets/images/flags/us_flag.jpg" alt="img">
 											</span>
 											English
 										</div>
@@ -119,7 +119,7 @@
 									<a class="ti-dropdown-item flex items-center justify-between" href="javascript:void(0);">
 										<div class="flex items-center">
 											<span class="avatar avatar-rounded avatar-xs leading-none me-2">
-												<img src="build/assets/images/flags/spain_flag.jpg" alt="img">
+												<img src="/build/assets/images/flags/spain_flag.jpg" alt="img">
 											</span>
 											español
 										</div>
@@ -130,7 +130,7 @@
 									<a class="ti-dropdown-item flex items-center justify-between" href="javascript:void(0);">
 										<div class="flex items-center">
 											<span class="avatar avatar-rounded avatar-xs leading-none me-2">
-												<img src="build/assets/images/flags/french_flag.jpg" alt="img">
+												<img src="/build/assets/images/flags/french_flag.jpg" alt="img">
 											</span>
 											français
 										</div>
@@ -141,7 +141,7 @@
 									<a class="ti-dropdown-item flex items-center justify-between" href="javascript:void(0);">
 										<div class="flex items-center">
 											<span class="avatar avatar-rounded avatar-xs leading-none me-2">
-												<img src="build/assets/images/flags/uae_flag.jpg" alt="img">
+												<img src="/build/assets/images/flags/uae_flag.jpg" alt="img">
 											</span>
 											عربي
 										</div>
@@ -152,7 +152,7 @@
 									<a class="ti-dropdown-item flex items-center justify-between" href="javascript:void(0);">
 										<div class="flex items-center">
 											<span class="avatar avatar-rounded avatar-xs leading-none me-2">
-												<img src="build/assets/images/flags/germany_flag.jpg" alt="img">
+												<img src="/build/assets/images/flags/germany_flag.jpg" alt="img">
 											</span>
 											DE
 										</div>
@@ -163,7 +163,7 @@
 									<a class="ti-dropdown-item flex items-center justify-between" href="javascript:void(0);">
 										<div class="flex items-center">
 											<span class="avatar avatar-rounded avatar-xs leading-none me-2">
-												<img src="build/assets/images/flags/china_flag.jpg" alt="img">
+												<img src="/build/assets/images/flags/china_flag.jpg" alt="img">
 											</span>
 											中国人
 										</div>
@@ -216,7 +216,7 @@
 										<div class="flex items-center cart-dropdown-item gap-4">
 											<div class="leading-none">
 												<span class="avatar avatar-xl p-1 bg-primary/10">
-													<img src="build/assets/images/ecommerce/png/1.png" alt="Wireless Headphones">
+													<img src="/build/assets/images/ecommerce/png/1.png" alt="Wireless Headphones">
 												</span>
 											</div>
 											<div class="flex-auto">
@@ -260,7 +260,7 @@
 										<div class="flex items-center cart-dropdown-item gap-4">
 											<div class="leading-none">
 												<span class="avatar avatar-xl p-1 bg-secondary/10">
-													<img src="build/assets/images/ecommerce/png/14.png" alt="Wireless Headphones">
+													<img src="/build/assets/images/ecommerce/png/14.png" alt="Wireless Headphones">
 												</span>
 											</div>
 											<div class="flex-auto">
@@ -304,7 +304,7 @@
 										<div class="flex items-center cart-dropdown-item gap-4">
 											<div class="leading-none">
 												<span class="avatar avatar-xl p-1 bg-success/10">
-													<img src="build/assets/images/ecommerce/png/33.png" alt="Wireless Headphones">
+													<img src="/build/assets/images/ecommerce/png/33.png" alt="Wireless Headphones">
 												</span>
 											</div>
 											<div class="flex-auto">
@@ -348,7 +348,7 @@
 										<div class="flex items-center cart-dropdown-item gap-4">
 											<div class="leading-none">
 												<span class="avatar avatar-xl p-1 bg-warning/10">
-													<img src="build/assets/images/ecommerce/png/34.png" alt="Wireless Headphones">
+													<img src="/build/assets/images/ecommerce/png/34.png" alt="Wireless Headphones">
 												</span>
 											</div>
 											<div class="flex-auto">
@@ -392,7 +392,7 @@
 										<div class="flex items-center cart-dropdown-item gap-4">
 											<div class="leading-none">
 												<span class="avatar avatar-xl p-1 bg-pinkmain/10">
-													<img src="build/assets/images/ecommerce/png/31.png" alt="Wireless Headphones">
+													<img src="/build/assets/images/ecommerce/png/31.png" alt="Wireless Headphones">
 												</span>
 											</div>
 											<div class="flex-auto">
@@ -485,7 +485,7 @@
 												<div class="flex items-start">
 													<div class="pe-2 leading-none"> <span
 															class="avatar avatar-md avatar-rounded svg-white">
-															<img src="build/assets/images/faces/2.jpg" alt="img"> </span>
+															<img src="/build/assets/images/faces/2.jpg" alt="img"> </span>
 													</div>
 													<div class="flex-grow-1 flex items-start justify-between">
 														<div>
@@ -527,7 +527,7 @@
 												<div class="flex items-start">
 													<div class="pe-2 leading-none"> <span
 															class="avatar avatar-md avatar-rounded svg-white">
-															<img src="build/assets/images/faces/6.jpg" alt="img"> </span>
+															<img src="/build/assets/images/faces/6.jpg" alt="img"> </span>
 													</div>
 													<div class="flex-grow-1 flex items-start justify-between">
 														<div>
@@ -567,7 +567,7 @@
 												<div class="flex items-start">
 													<div class="pe-2 leading-none"> <span
 															class="avatar avatar-md avatar-rounded svg-white">
-															<img src="build/assets/images/faces/14.jpg" alt="img"> </span>
+															<img src="/build/assets/images/faces/14.jpg" alt="img"> </span>
 													</div>
 													<div class="flex-grow-1 flex items-start justify-between">
 														<div>
@@ -843,7 +843,7 @@
 								id="mainHeaderProfile" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
 								<div class="flex items-center">
 									<div class="xl:me-2 me-0">
-										<img src="build/assets/images/faces/2.jpg" alt="img" class="avatar avatar-sm avatar-rounded mb-0">
+										<img src="/build/assets/images/faces/2.jpg" alt="img" class="avatar avatar-sm avatar-rounded mb-0">
 									</div>
 									<div class="xl:block hidden leading-none">
 										<span class="font-medium leading-none dark:text-defaulttextcolor/70">Mr. Jack</span>
