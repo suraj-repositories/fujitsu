@@ -2,7 +2,11 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\ServiceProvider;
+
+use App\Services\FileService;
+use App\Services\Impl\FileServiceImpl;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -12,6 +16,7 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         //
+        $this->app->singleton(FileService::class, FileServiceImpl::class);
     }
 
     /**
@@ -20,5 +25,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+        if (app()->environment('local')) {
+            $this->app->booted(function () {
+                Artisan::call('route:clear');
+            });
+        }
     }
 }

@@ -57,6 +57,8 @@
 
     @routes
 
+    @vite('resources/css/app.css')
+
     @yield('styles')
 
 </head>
