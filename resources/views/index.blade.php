@@ -3465,8 +3465,8 @@
                         <div class="ti-modal-content">
                             <div class="ti-modal-body">
                                 <div class="input-group">
-                                    <input type="text" class="form-control border-end-0 !border-s" placeholder="Search Anything ..."
-                                        aria-label="Search Anything ..." aria-describedby="button-addon2">
+                                    <input type="text" class="form-control border-end-0 !border-s" placeholder="Search Anything ...123456"
+                                        aria-label="Search Anything ...2123" aria-describedby="button-addon2">
                                     <button class="ti-btn ti-btn-primary !m-0" type="button"
                                         id="button-addon2"><i class="bi bi-search"></i></button>
                                 </div>
