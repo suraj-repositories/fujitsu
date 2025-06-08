@@ -15,6 +15,7 @@ class AuthController extends Controller
     {
         return view("auth.login.cover_login");
     }
+
     public function registerPage()
     {
         return view("auth.register");
@@ -36,7 +37,7 @@ class AuthController extends Controller
                 case 'admin':
                     return redirect()->route('admin.dashboard.index')->with('success', 'Login successful!');
                 case 'user':
-                    return redirect()->route('user.dashboard.index')->with('success', 'Login successful!');
+                    return redirect()->route('user.dashboard.index', Auth::user()->userid)->with('success', 'Login successful!');
                 case 'super_admin':
                     return redirect()->route('superadmin.dashboard.index')->with('success', 'Login successful!');
                 default:
@@ -75,7 +76,7 @@ class AuthController extends Controller
             Auth::logout();
             $request->session()->invalidate();
             $request->session()->regenerateToken();
-            return redirect('/login')->with('success', 'Logout successful!');
+            return redirect()->route('login')->with('success', 'Logout successful!');
         }
         return redirect('/');
     }

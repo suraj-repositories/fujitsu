@@ -7,10 +7,6 @@
 @section('content')
     <div class="page">
 
-        <!-- Start::main-header -->
-        @include('user.partials.navbar')
-        <!-- End::main-header -->
-
         <!-- Start::main-sidebar -->
         @include('user.partials.sidebar')
         <!-- End::main-sidebar -->
@@ -22,11 +18,11 @@
         <!-- End::content  -->
 
         <!-- Start::main-footer -->
-        @include('layouts.footer')
+        @include('layouts.partials.footer')
         <!-- End::main-footer -->
 
         <!-- Start::main-modal -->
-        @include('layouts.sm_search')
+        @include('layouts.partials.sm_search')
         <!-- End::main-modal -->
 
     </div>

@@ -19,41 +19,41 @@
     <title> @yield('title') | {{ config('app.name') }} </title>
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('/build/assets/images/brand-logos/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('/assets/images/brand-logos/favicon.ico') }}" type="image/x-icon">
 
     <!-- Main Theme Js -->
-    <script src="{{ asset('/build/assets/main.js') }}"></script>
+    <script src="{{ asset('/assets/main.js') }}"></script>
 
     <!-- ICONS CSS -->
-    <link href="{{ asset('/build/assets/icon-fonts/icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/icon-fonts/icons.css') }}" rel="stylesheet">
 
     <!-- Choices JS -->
-    <script src="{{ asset('/build/assets/libs/choices.js/public/assets/scripts/choices.min.js') }}"></script>
+    <script src="{{ asset('/assets/libs/choices.js/public/assets/scripts/choices.min.js') }}"></script>
 
     <!-- Node Waves Css -->
-    <link href="{{ asset('/build/assets/libs/node-waves/waves.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/libs/node-waves/waves.min.css') }}" rel="stylesheet">
 
     <!-- Simplebar Css -->
-    <link href="{{ asset('/build/assets/libs/simplebar/simplebar.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/libs/simplebar/simplebar.min.css') }}" rel="stylesheet">
 
     <!-- Color Picker Css -->
-    <link rel="stylesheet" href="{{ asset('/build/assets/libs/%40simonwep/pickr/themes/nano.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/libs/%40simonwep/pickr/themes/nano.min.css') }}">
 
     <!-- Choices Css -->
-    <link rel="stylesheet" href="{{ asset('/build/assets/libs/choices.js/public/assets/styles/choices.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/libs/choices.js/public/assets/styles/choices.min.css') }}">
 
     <!-- FlatPickr CSS -->
-    <link rel="stylesheet" href="{{ asset('/build/assets/libs/flatpickr/flatpickr.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/libs/flatpickr/flatpickr.min.css') }}">
 
     <!-- Auto Complete CSS -->
-    <link rel="stylesheet" href="{{ asset('/build/assets/libs/%40tarekraafat/autocomplete.js/css/autoComplete.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/libs/%40tarekraafat/autocomplete.js/css/autoComplete.css') }}">
 
     <!-- APP CSS & APP SCSS -->
-    <link rel="preload" as="style" href="{{ asset('/build/assets/app-0uaTFK0y.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/build/assets/app-0uaTFK0y.css') }}" />
+    <link rel="preload" as="style" href="{{ asset('/assets/app-0uaTFK0y.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/assets/app-0uaTFK0y.css') }}" />
 
     <!-- FlatPickr CSS -->
-    <link rel="stylesheet" href="{{ asset('/build/assets/libs/flatpickr/flatpickr.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/libs/flatpickr/flatpickr.min.css') }}">
 
     @routes
 
@@ -491,35 +491,35 @@
                             <input class="ti-form-radio bgimage-input bg-img1" type="radio" name="theme-images"
                                 id="switcher-bg-img">
                             <div class="bg-img-container">
-                                <img src="/build/assets/images/menu-bg-images/bg-img1.jpg" alt="">
+                                <img src="/assets/images/menu-bg-images/bg-img1.jpg" alt="">
                             </div>
                         </div>
                         <div class="ti-form-radio switch-select menu-img-select">
                             <input class="ti-form-radio bgimage-input bg-img2" type="radio" name="theme-images"
                                 id="switcher-bg-img1">
                             <div class="bg-img-container">
-                                <img src="/build/assets/images/menu-bg-images/bg-img2.jpg" alt="">
+                                <img src="/assets/images/menu-bg-images/bg-img2.jpg" alt="">
                             </div>
                         </div>
                         <div class="ti-form-radio switch-select menu-img-select">
                             <input class="ti-form-radio bgimage-input bg-img3" type="radio" name="theme-images"
                                 id="switcher-bg-img2">
                             <div class="bg-img-container">
-                                <img src="/build/assets/images/menu-bg-images/bg-img3.jpg" alt="">
+                                <img src="/assets/images/menu-bg-images/bg-img3.jpg" alt="">
                             </div>
                         </div>
                         <div class="ti-form-radio switch-select menu-img-select">
                             <input class="ti-form-radio bgimage-input bg-img4" type="radio" name="theme-images"
                                 id="switcher-bg-img3">
                             <div class="bg-img-container">
-                                <img src="/build/assets/images/menu-bg-images/bg-img4.jpg" alt="">
+                                <img src="/assets/images/menu-bg-images/bg-img4.jpg" alt="">
                             </div>
                         </div>
                         <div class="ti-form-radio switch-select menu-img-select">
                             <input class="ti-form-radio bgimage-input bg-img5" type="radio" name="theme-images"
                                 id="switcher-bg-img4">
                             <div class="bg-img-container">
-                                <img src="/build/assets/images/menu-bg-images/bg-img5.jpg" alt="">
+                                <img src="/assets/images/menu-bg-images/bg-img5.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -538,9 +538,11 @@
 
     <!-- Loader -->
     <div id="loader">
-        <img src="{{ asset('/build/assets/images/media/loader.svg') }}" alt="">
+        <img src="{{ asset('/assets/images/media/loader.svg') }}" alt="">
     </div>
     <!-- Loader -->
+
+    @include('layouts.partials.navbar')
 
     @yield('content')
 
@@ -553,48 +555,48 @@
     <!-- Scroll To Top -->
 
     <!-- Switch JS -->
-    <script src="{{ asset('/build/assets/switch.js') }}"></script>
+    <script src="{{ asset('/assets/switch.js') }}"></script>
 
     <!-- Popper JS -->
-    <script src="{{ asset('/build/assets/libs/%40popperjs/core/umd/popper.min.js') }}"></script>
+    <script src="{{ asset('/assets/libs/%40popperjs/core/umd/popper.min.js') }}"></script>
 
     <!-- Preline JS -->
-    <script src="{{ asset('/build/assets/libs/preline/preline.js') }}"></script>
+    <script src="{{ asset('/assets/libs/preline/preline.js') }}"></script>
 
     <!-- Node Waves JS-->
-    <script src="{{ asset('/build/assets/libs/node-waves/waves.min.js') }}"></script>
+    <script src="{{ asset('/assets/libs/node-waves/waves.min.js') }}"></script>
 
     <!-- Simplebar JS -->
-    <script src="{{ asset('/build/assets/libs/simplebar/simplebar.min.js') }}"></script>
-    <link rel="modulepreload" href="{{ asset('/build/assets/simplebar-B35Aj-bA.js') }}" />
-    <script type="module" src="{{ asset('/build/assets/simplebar-B35Aj-bA.js') }}"></script>
+    <script src="{{ asset('/assets/libs/simplebar/simplebar.min.js') }}"></script>
+    <link rel="modulepreload" href="{{ asset('/assets/simplebar-B35Aj-bA.js') }}" />
+    <script type="module" src="{{ asset('/assets/simplebar-B35Aj-bA.js') }}"></script>
 
     <!-- Auto Complete JS -->
-    <script src="{{ asset('/build/assets/libs/%40tarekraafat/autocomplete.js/autoComplete.min.js') }}"></script>
+    <script src="{{ asset('/assets/libs/%40tarekraafat/autocomplete.js/autoComplete.min.js') }}"></script>
 
     <!-- Color Picker JS -->
-    <script src="{{ asset('/build/assets/libs/%40simonwep/pickr/pickr.es5.min.js') }}"></script>
+    <script src="{{ asset('/assets/libs/%40simonwep/pickr/pickr.es5.min.js') }}"></script>
 
     <!-- Date & Time Picker JS -->
-    <script src="{{ asset('/build/assets/libs/flatpickr/flatpickr.min.js') }}"></script>
+    <script src="{{ asset('/assets/libs/flatpickr/flatpickr.min.js') }}"></script>
 
 
     <!-- Apex Charts JS -->
-    <script src="{{ asset('/build/assets/libs/apexcharts/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('/assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
     <!-- Sales Dashboard -->
-    <link rel="modulepreload" href="{{ asset('/build/assets/sales-dashboard-kn0sa7YP.js') }}" />
-    <script type="module" src="{{ asset('/build/assets/sales-dashboard-kn0sa7YP.js') }}"></script>
+    <link rel="modulepreload" href="{{ asset('/assets/sales-dashboard-kn0sa7YP.js') }}" />
+    <script type="module" src="{{ asset('/assets/sales-dashboard-kn0sa7YP.js') }}"></script>
 
     <!-- Sticky JS -->
-    <script src="{{ asset('/build/assets/sticky.js') }}"></script>
+    <script src="{{ asset('/assets/sticky.js') }}"></script>
 
     <!-- Custom-Switcher JS -->
-    <link rel="modulepreload" href="{{ asset('/build/assets/custom-switcher-BgkrlHyM.js') }}" />
-    <script type="module" src="{{ asset('/build/assets/custom-switcher-BgkrlHyM.js') }}"></script>
+    <link rel="modulepreload" href="{{ asset('/assets/custom-switcher-BgkrlHyM.js') }}" />
+    <script type="module" src="{{ asset('/assets/custom-switcher-BgkrlHyM.js') }}"></script>
     <!-- App JS-->
-    <link rel="modulepreload" href="{{ asset('/build/assets/app-DQ-BRFdc.js') }}" />
-    <script type="module" src="{{ asset('/build/assets/app-DQ-BRFdc.js') }}"></script>
+    <link rel="modulepreload" href="{{ asset('/assets/app-DQ-BRFdc.js') }}" />
+    <script type="module" src="{{ asset('/assets/app-DQ-BRFdc.js') }}"></script>
     <!-- END Scripts -->
 
     @yield('scripts')

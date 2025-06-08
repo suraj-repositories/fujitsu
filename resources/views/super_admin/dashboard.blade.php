@@ -374,7 +374,7 @@
                                     <div class="leading-none">
                                         <span
                                             class="avatar avatar-md p-2 bg-light border dark:border-defaultborder/10 avatar-rounded">
-                                            <img src="build/assets/images/flags/us_flag.jpg" alt="">
+                                            <img src="/assets/images/flags/us_flag.jpg" alt="">
                                         </span>
                                     </div>
                                     <div class="flex-auto leading-none">
@@ -394,7 +394,7 @@
                                     <div class="leading-none">
                                         <span
                                             class="avatar avatar-md p-2 bg-light border dark:border-defaultborder/10 avatar-rounded">
-                                            <img src="build/assets/images/flags/germany_flag.jpg" alt="">
+                                            <img src="/assets/images/flags/germany_flag.jpg" alt="">
                                         </span>
                                     </div>
                                     <div class="flex-auto leading-none">
@@ -414,7 +414,7 @@
                                     <div class="leading-none">
                                         <span
                                             class="avatar avatar-md p-2 bg-light border dark:border-defaultborder/10 avatar-rounded">
-                                            <img src="build/assets/images/flags/mexico_flag.jpg" alt="">
+                                            <img src="/assets/images/flags/mexico_flag.jpg" alt="">
                                         </span>
                                     </div>
                                     <div class="flex-auto leading-none">
@@ -434,7 +434,7 @@
                                     <div class="leading-none">
                                         <span
                                             class="avatar avatar-md p-2 bg-light border dark:border-defaultborder/10 avatar-rounded">
-                                            <img src="build/assets/images/flags/uae_flag.jpg" alt="">
+                                            <img src="/assets/images/flags/uae_flag.jpg" alt="">
                                         </span>
                                     </div>
                                     <div class="flex-auto leading-none">
@@ -454,7 +454,7 @@
                                     <div class="leading-none">
                                         <span
                                             class="avatar avatar-md p-2 bg-light border dark:border-defaultborder/10 avatar-rounded">
-                                            <img src="build/assets/images/flags/argentina_flag.jpg" alt="">
+                                            <img src="/assets/images/flags/argentina_flag.jpg" alt="">
                                         </span>
                                     </div>
                                     <div class="flex-auto leading-none">
@@ -474,7 +474,7 @@
                                     <div class="leading-none">
                                         <span
                                             class="avatar avatar-md p-2 bg-light border dark:border-defaultborder/10 avatar-rounded">
-                                            <img src="build/assets/images/flags/russia_flag.jpg" alt="">
+                                            <img src="/assets/images/flags/russia_flag.jpg" alt="">
                                         </span>
                                     </div>
                                     <div class="flex-auto leading-none">
@@ -836,7 +836,7 @@
                                         <td>
                                             <div class="flex">
                                                 <span class="avatar avatar-md bg-light"><img
-                                                        src="build/assets/images/ecommerce/png/1.png" class=""
+                                                        src="/assets/images/ecommerce/png/1.png" class=""
                                                         alt="..."></span>
                                                 <div class="ms-2">
                                                     <p class="font-semibold !mb-0 flex items-center"><a
@@ -854,7 +854,7 @@
                                             <div class="flex items-center gap-2">
                                                 <div class="leading-none">
                                                     <span class="avatar avatar-xs avatar-rounded">
-                                                        <img src="build/assets/images/faces/1.jpg" alt="">
+                                                        <img src="/assets/images/faces/1.jpg" alt="">
                                                     </span>
                                                 </div>
                                                 <div>
@@ -884,7 +884,7 @@
                                         <td>
                                             <div class="flex">
                                                 <span class="avatar avatar-md bg-light"><img
-                                                        src="build/assets/images/ecommerce/png/36.png" class=""
+                                                        src="/assets/images/ecommerce/png/36.png" class=""
                                                         alt="..."></span>
                                                 <div class="ms-2">
                                                     <p class="font-semibold !mb-0 flex items-center"><a
@@ -904,7 +904,7 @@
                                             <div class="flex items-center gap-2">
                                                 <div class="leading-none">
                                                     <span class="avatar avatar-xs avatar-rounded">
-                                                        <img src="build/assets/images/faces/2.jpg" alt="">
+                                                        <img src="/assets/images/faces/2.jpg" alt="">
                                                     </span>
                                                 </div>
                                                 <div>
@@ -936,7 +936,7 @@
                                         <td>
                                             <div class="flex">
                                                 <span class="avatar avatar-md bg-light"><img
-                                                        src="build/assets/images/ecommerce/png/31.png" class=""
+                                                        src="/assets/images/ecommerce/png/31.png" class=""
                                                         alt="..."></span>
                                                 <div class="ms-2">
                                                     <p class="font-semibold !mb-0 flex items-center"><a
@@ -956,7 +956,7 @@
                                             <div class="flex items-center gap-2">
                                                 <div class="leading-none">
                                                     <span class="avatar avatar-xs avatar-rounded">
-                                                        <img src="build/assets/images/faces/10.jpg" alt="">
+                                                        <img src="/assets/images/faces/10.jpg" alt="">
                                                     </span>
                                                 </div>
                                                 <div>
@@ -988,7 +988,7 @@
                                         <td>
                                             <div class="flex">
                                                 <span class="avatar avatar-md bg-light"><img
-                                                        src="build/assets/images/ecommerce/png/14.png" class=""
+                                                        src="/assets/images/ecommerce/png/14.png" class=""
                                                         alt="..."></span>
                                                 <div class="ms-2">
                                                     <p class="font-semibold !mb-0 flex items-center"><a
@@ -1008,7 +1008,7 @@
                                             <div class="flex items-center gap-2">
                                                 <div class="leading-none">
                                                     <span class="avatar avatar-xs avatar-rounded">
-                                                        <img src="build/assets/images/faces/3.jpg" alt="">
+                                                        <img src="/assets/images/faces/3.jpg" alt="">
                                                     </span>
                                                 </div>
                                                 <div>
@@ -1040,7 +1040,7 @@
                                         <td class="border-bottom-0">
                                             <div class="flex">
                                                 <span class="avatar avatar-md bg-light"><img
-                                                        src="build/assets/images/ecommerce/png/13.png" class=""
+                                                        src="/assets/images/ecommerce/png/13.png" class=""
                                                         alt="..."></span>
                                                 <div class="ms-2">
                                                     <p class="font-semibold !mb-0 flex items-center"><a
@@ -1060,7 +1060,7 @@
                                             <div class="flex items-center gap-2">
                                                 <div class="leading-none">
                                                     <span class="avatar avatar-xs avatar-rounded">
-                                                        <img src="build/assets/images/faces/11.jpg" alt="">
+                                                        <img src="/assets/images/faces/11.jpg" alt="">
                                                     </span>
                                                 </div>
                                                 <div>
@@ -1132,7 +1132,7 @@
                                     <div>
                                         <span
                                             class="avatar avatar-md avatar-rounded bg-light p-2 border dark:border-defaultborder/10">
-                                            <img src="build/assets/images/browsers/chrome.png" alt="">
+                                            <img src="/assets/images/browsers/chrome.png" alt="">
                                         </span>
                                     </div>
                                     <div class="flex-auto">
@@ -1158,7 +1158,7 @@
                                     <div>
                                         <span
                                             class="avatar avatar-md avatar-rounded bg-light p-2 border dark:border-defaultborder/10">
-                                            <img src="build/assets/images/browsers/edge.png" alt="">
+                                            <img src="/assets/images/browsers/edge.png" alt="">
                                         </span>
                                     </div>
                                     <div class="flex-auto">
@@ -1184,7 +1184,7 @@
                                     <div>
                                         <span
                                             class="avatar avatar-md avatar-rounded bg-light p-2 border dark:border-defaultborder/10">
-                                            <img src="build/assets/images/browsers/firefox.png" alt="">
+                                            <img src="/assets/images/browsers/firefox.png" alt="">
                                         </span>
                                     </div>
                                     <div class="flex-auto">
@@ -1210,7 +1210,7 @@
                                     <div>
                                         <span
                                             class="avatar avatar-md avatar-rounded bg-light p-2 border dark:border-defaultborder/10">
-                                            <img src="build/assets/images/browsers/safari.png" alt="">
+                                            <img src="/assets/images/browsers/safari.png" alt="">
                                         </span>
                                     </div>
                                     <div class="flex-auto">
@@ -1236,7 +1236,7 @@
                                     <div>
                                         <span
                                             class="avatar avatar-md avatar-rounded bg-light p-2 border dark:border-defaultborder/10">
-                                            <img src="build/assets/images/browsers/uc.png" alt="">
+                                            <img src="/assets/images/browsers/uc.png" alt="">
                                         </span>
                                     </div>
                                     <div class="flex-auto">
@@ -1261,7 +1261,7 @@
                                     <div>
                                         <span
                                             class="avatar avatar-md avatar-rounded bg-light p-2 border dark:border-defaultborder/10">
-                                            <img src="build/assets/images/browsers/opera.png" alt="">
+                                            <img src="/assets/images/browsers/opera.png" alt="">
                                         </span>
                                     </div>
                                     <div class="flex-auto">
@@ -1287,7 +1287,7 @@
                                     <div>
                                         <span
                                             class="avatar avatar-md avatar-rounded bg-light p-2 border dark:border-defaultborder/10">
-                                            <img src="build/assets/images/browsers/samsung-internet.png" alt="">
+                                            <img src="/assets/images/browsers/samsung-internet.png" alt="">
                                         </span>
                                     </div>
                                     <div class="flex-auto">

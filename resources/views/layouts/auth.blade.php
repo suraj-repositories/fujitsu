@@ -19,17 +19,17 @@
 
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('build/assets/images/brand-logos/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('/assets/images/brand-logos/favicon.ico') }}" type="image/x-icon">
 
     <!-- Main Theme Js -->
-    <script src="{{ asset('build/assets/authentication-main.js') }}"></script>
+    <script src="{{ asset('/assets/authentication-main.js') }}"></script>
 
     <!-- ICONS CSS -->
-    <link href="{{ asset('build/assets/icon-fonts/icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/icon-fonts/icons.css') }}" rel="stylesheet">
 
     <!-- APP CSS & APP SCSS -->
-    <link rel="preload" as="style" href="{{ asset('build/assets/app-0uaTFK0y.css') }}" />
-    <link rel="stylesheet" href="{{ asset('build/assets/app-0uaTFK0y.css') }}" />
+    <link rel="preload" as="style" href="{{ asset('/assets/app-0uaTFK0y.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/assets/app-0uaTFK0y.css') }}" />
 
     <link rel="stylesheet" href="{{ asset('build/customs/css/styles.css') }}" />
 
@@ -44,12 +44,12 @@
     @yield('content')
 
     <!-- Particles JS -->
-    <script src="{{ asset('build/assets/libs/particles.js/particles.js') }}"></script>
+    <script src="{{ asset('/assets/libs/particles.js/particles.js') }}"></script>
 
-    <link rel="modulepreload" href="{{ asset('build/assets/cover-password-BWQnCVcf.js') }}" />
-    <script type="module" src="{{ asset('build/assets/cover-password-BWQnCVcf.js') }}"></script>
+    <link rel="modulepreload" href="{{ asset('/assets/cover-password-BWQnCVcf.js') }}" />
+    <script type="module" src="{{ asset('/assets/cover-password-BWQnCVcf.js') }}"></script>
     <!-- Show Password JS -->
-    <script src="{{ asset('build/assets/show-password.js') }}"></script>
+    <script src="{{ asset('/assets/show-password.js') }}"></script>
 
 
 </body>
