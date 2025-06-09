@@ -33,16 +33,19 @@ class AuthController extends Controller
         if ($user && Hash::check($validated['password'], $user->password)) {
             Auth::login($user);
 
-            switch ($user->role) {
-                case 'admin':
-                    return redirect()->route('admin.dashboard.index')->with('success', 'Login successful!');
-                case 'user':
-                    return redirect()->route('user.dashboard.index', Auth::user()->userid)->with('success', 'Login successful!');
-                case 'super_admin':
-                    return redirect()->route('superadmin.dashboard.index')->with('success', 'Login successful!');
-                default:
-                    return redirect('/')->with('warning', 'Role not recognized. Redirected to home.');
+            $roleRoutes = [
+                'super_admin' => route('superadmin.dashboard.index'),
+                'admin' => route('admin.dashboard.index'),
+                'user' => route('user.dashboard.index', $user->userid),
+            ];
+
+            foreach ($roleRoutes as $role => $route) {
+                if ($user->hasRole($role)) {
+                    return redirect($route)->with('success', 'Login successful!');
+                }
             }
+
+            return redirect('/')->with('warning', 'Role not recognized. Redirected to home.');
         }
 
         return back()->withInput()->withErrors(['auth_uid' => 'Invalid credentials.']);

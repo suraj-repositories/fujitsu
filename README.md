@@ -21,4 +21,5 @@
 #### Libraries
 - [Ziggy](https://github.com/tighten/ziggy)
 - [Yajra DataTable](https://github.com/yajra/laravel-datatables)
+- [spatie/laravel-permission](https://spatie.be/docs/laravel-permission/v6/introduction)
 

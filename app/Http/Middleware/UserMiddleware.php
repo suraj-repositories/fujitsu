@@ -17,7 +17,7 @@ class UserMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if (Auth::check() &&
-            (Auth::user()->role == 'admin' || Auth::user()->role == 'user')) {
+            (Auth::user()->hasRole('admin') || Auth::user()->hasRole('user'))) {
                 $request->route()->setParameter('userid', Auth::user()->id);
             return $next($request);
         }

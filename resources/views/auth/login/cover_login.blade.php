@@ -86,9 +86,15 @@
                                             <div class="xl:col-span-12 col-span-12">
                                                 <label for="signup-auth-uid" class="ti-form-label text-dark">User Id</label>
                                                 <div class="relative">
-                                                    <input type="text" class="form-control form-control-lg"
+                                                    <input type="text" class="form-control form-control-lg invalid"
                                                         id="signup-auth-uid" placeholder="Enter User Id" name="auth_uid" value="{{ old('auth_uid') }}">
                                                 </div>
+                                                @error('auth_uid')
+                                                    <small class="text-danger">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
+
                                             </div>
                                             <div class="xl:col-span-12 col-span-12 mb-2">
                                                 <label for="signin-password"

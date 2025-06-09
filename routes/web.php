@@ -3,5 +3,5 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    dd('Welcome to the home page!');
+    return view('web.index');
 });

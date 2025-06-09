@@ -16,7 +16,7 @@ class SuperAdminMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-         if(Auth::check() && strtolower(Auth::user()->role) == 'super_admin'){
+         if(Auth::check() && Auth::user()->hasRole('super_admin')){
             return $next($request);
         }
         return redirect()->route('login')->with('error', 'Opps! You do not have permission to access.');
