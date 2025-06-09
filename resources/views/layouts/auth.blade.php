@@ -31,11 +31,9 @@
     <link rel="preload" as="style" href="{{ asset('/assets/app-0uaTFK0y.css') }}" />
     <link rel="stylesheet" href="{{ asset('/assets/app-0uaTFK0y.css') }}" />
 
-    <link rel="stylesheet" href="{{ asset('build/customs/css/styles.css') }}" />
-
     @routes
 
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 

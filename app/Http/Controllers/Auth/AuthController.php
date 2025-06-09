@@ -30,7 +30,13 @@ class AuthController extends Controller
 
         $user = User::where('userid', $validated['auth_uid'])->first();
 
-        if ($user && Hash::check($validated['password'], $user->password)) {
+        if (!Hash::check($validated['password'], $user->password)) {
+            return redirect()->back()
+                ->withErrors(['password' => 'The provided password is incorrect.'])
+                ->withInput($request->except('password'));
+        }
+
+        if ($user) {
             Auth::login($user);
 
             $roleRoutes = [
@@ -48,7 +54,7 @@ class AuthController extends Controller
             return redirect('/')->with('warning', 'Role not recognized. Redirected to home.');
         }
 
-        return back()->withInput()->withErrors(['auth_uid' => 'Invalid credentials.']);
+        return redirect()->back()->with('error', 'Login failed. Please check your credentials.');
     }
 
 

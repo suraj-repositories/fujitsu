@@ -18,7 +18,7 @@
                                     class="authentication-brand desktop-dark">
                             </a>
                         </div>
-                        <div class="aunthentication-cover-content flex items-center justify-center px-2">
+                        <div class="aunthentication-cover-content-main p-6 flex items-center justify-center">
                             <div class="grid grid-cols-12 justify-center items-center">
                                 <div class="xxl:col-span-1 col-span-12"></div>
                                 <div class="xxl:col-span-10 xl:col-span-12 col-span-12">
@@ -42,9 +42,9 @@
                         </div>
                         <div class="xxl:col-span-8 xl:col-span-10 lg:col-span-12 md:col-span-12 sm:col-span-12 col-span-12">
                             <div class="box !shadow-none my-auto">
-                                <form action="{{ route('login.validate') }}"  method="POST">
+                                <form action="{{ route('login.validate') }}" method="POST">
                                     @csrf
-                                    <div class="box-body p-[3rem] py-2 min-w-[90dvw] sm:min-w-[400px]">
+                                    <div class="box-body p-[3rem] py-3 min-w-[90dvw] sm:min-w-[400px]">
                                         <div class="flex items-center justify-center mb-4">
                                             <span class="auth-icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="password">
@@ -86,13 +86,15 @@
                                             <div class="xl:col-span-12 col-span-12">
                                                 <label for="signup-auth-uid" class="ti-form-label text-dark">User Id</label>
                                                 <div class="relative">
-                                                    <input type="text" class="form-control form-control-lg invalid"
-                                                        id="signup-auth-uid" placeholder="Enter User Id" name="auth_uid" value="{{ old('auth_uid') }}">
+                                                    <input type="text"
+                                                        class="form-control form-control-lg @error('auth_uid') invalid @enderror"
+                                                        id="signup-auth-uid" placeholder="Enter User Id" name="auth_uid"
+                                                        value="{{ old('auth_uid') }}">
                                                 </div>
                                                 @error('auth_uid')
-                                                    <small class="text-danger">
+                                                    <small class="validation-error">
                                                         {{ $message }}
-                                                    </div>
+                                                    </small>
                                                 @enderror
 
                                             </div>
@@ -103,13 +105,21 @@
                                                         class="float-end link-danger opacity-50 !font-medium text-xs">Forget
                                                         password ?</a></label>
                                                 <div class="relative">
-                                                    <input type="password" class="form-control form-control-lg"
+                                                    <input type="password"
+                                                        class="form-control form-control-lg @error('password') password invalid @enderror"
                                                         id="signin-password" placeholder="password" name="password">
                                                     <a aria-label="anchor" href="javascript:void(0);"
                                                         class="show-password-button text-textmuted dark:text-textmuted/50"
                                                         onclick="createpassword('signin-password',this)"
-                                                        id="button-addon2"><i class="ri-eye-off-line align-middle"></i></a>
+                                                        id="button-addon2"><i
+                                                            class="ri-eye-off-line align-middle"></i></a>
                                                 </div>
+                                                @error('password')
+                                                    <small class="validation-error">
+                                                        {{ $message }}
+                                                    </small>
+                                                @enderror
+
                                                 <div class="mt-2">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" value=""
@@ -141,7 +151,8 @@
                                             </button>
                                         </div>
                                         <div class="grid mt-4">
-                                            <button type="submit" class="ti-btn ti-btn-primary ti-btn-lg">Sign In</button>
+                                            <button type="submit" class="ti-btn ti-btn-primary ti-btn-lg">Sign
+                                                In</button>
                                         </div>
                                         <div class="text-center mb-0">
                                             <p class="text-textmuted dark:text-textmuted/50 mt-3 mb-0">Dont have an
