@@ -82,7 +82,7 @@
                              <a href="javascript:void(0)">Authentication</a>
                          </li>
                          <li class="slide">
-                             <a href="coming-soon.html" class="side-menu__item">Registration</a>
+                             <a href="{{ route('superadmin.authentication.registration.index') }}" class="side-menu__item">Registration</a>
                          </li>
                          <li class="slide has-sub">
                              <a href="javascript:void(0);" class="side-menu__item">Create Password

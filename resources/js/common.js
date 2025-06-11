@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log(123);
+
     (new Form()).init();
 });
 
@@ -9,6 +9,7 @@ class Form {
         this.enableInputValidator();
         this.enableSelectValidator();
         this.enableTextAreaValidator();
+        this.enableClipChecked();
     }
 
     enableInputValidator() {
@@ -48,6 +49,30 @@ class Form {
                 const validationError = textarea.closest('.relative')?.nextElementSibling;
                 if (validationError?.classList.contains('validation-error')) {
                     validationError.remove();
+                }
+            });
+        });
+    }
+
+    enableClipChecked() {
+        const clips = document.querySelectorAll('.clip-checked');
+        clips.forEach(clip => {
+
+            const checkbox = clip.querySelector('input[type="checkbox"]');
+            if (checkbox) {
+                if(checkbox.disabled){
+                    return;
+                }
+
+                checkbox.addEventListener('change', () => {
+                    clip.classList.toggle('active', checkbox.checked);
+                });
+            }
+            clip.addEventListener('click', () => {
+                clip.classList.toggle('active');
+                const input = clip.querySelector('input[type="checkbox"]');
+                if (input) {
+                    input.checked = !input.checked;
                 }
             });
         });
