@@ -59,7 +59,7 @@
                  <!-- End::slide -->
 
                  <!-- Start::slide__category -->
-                 <li class="slide__category"><span class="category-name">Crafted</span></li>
+                 <li class="slide__category"><span class="category-name">Settings</span></li>
                  <!-- End::slide__category -->
 
                  <!-- Start::slide -->
@@ -74,15 +74,12 @@
                              <path d="M88,88V56a40,40,0,0,1,80,0V88" fill="none" stroke="currentColor"
                                  stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
                          </svg>
-                         <span class="side-menu__label">Authentication</span>
+                         <span class="side-menu__label">Auth Settings</span>
                          <i class="ri-arrow-right-s-line side-menu__angle"></i>
                      </a>
                      <ul class="slide-menu child1">
-                         <li class="slide side-menu__label1">
-                             <a href="javascript:void(0)">Authentication</a>
-                         </li>
                          <li class="slide">
-                             <a href="{{ route('superadmin.authentication.registration.index') }}" class="side-menu__item">Registration</a>
+                             <a href="{{ route('superadmin.settings.auth.registration.index') }}" class="side-menu__item">Registration</a>
                          </li>
                          <li class="slide has-sub">
                              <a href="javascript:void(0);" class="side-menu__item">Create Password

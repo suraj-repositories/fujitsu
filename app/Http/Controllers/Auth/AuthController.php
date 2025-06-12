@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Form;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,7 +19,11 @@ class AuthController extends Controller
 
     public function registerPage()
     {
-        return view("auth.login.cover_register");
+         $form = Form::with(['fields' => function ($query) {
+            $query->where('enabled', true)->orderBy('order');
+        }])->where('name', 'registration')->firstOrFail();
+
+        return view("auth.register.cover_register", compact('form'));
     }
 
     public function login(Request $request)

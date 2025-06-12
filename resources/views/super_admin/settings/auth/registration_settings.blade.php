@@ -1,4 +1,6 @@
 @extends('layouts.super_admin')
+@section('title', 'Registration Settings')
+
 @section('super-admin-content')
     <div class="container-fluid">
 
@@ -9,7 +11,7 @@
                 <nav>
                     <ol class="breadcrumb mb-1">
                         <li class="breadcrumb-item"><a href="javascript:void(0);">Settings</a></li>
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">Authentication</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Auth Settings</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Registration Settings</li>
                     </ol>
                 </nav>
@@ -19,9 +21,9 @@
                 <a href="javascript:void(0);" class="ti-btn ti-btn-soft-info btn-wave  waves-effect waves-light me-2 m-0">
                     <i class="bx bx-info-circle align-middle"></i> Help
                 </a>
-                <button type="button" class="ti-btn ti-btn-soft-primary btn-wave me-0 waves-effect waves-light">
+                {{-- <button type="button" class="ti-btn ti-btn-soft-primary btn-wave me-0 waves-effect waves-light">
                     <i class="bx bxs-chevron-up align-middle"></i>
-                </button>
+                </button> --}}
             </div>
         </div>
         <!-- Page Header Close -->
@@ -42,17 +44,19 @@
 
                         <h6 class="mb-3 font-bold">Form Fields</h6>
 
-                        <div class="flex gap-4 flex-wrap">
-                            <div
-                                class="form-check p-3 border border-dashed border-secondary rounded w-fit min-w-[200px] cursor-pointer clip-checked">
-                                <input type="checkbox" id="flexCheckDefault" class="form-check-input" />
-                                <label for="flexCheckDefault" class="form-check-label">
-                                    <span class="ms-2">First Name</span>
-                                </label>
-                            </div>
+                        <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                            @forelse ($form->fields as $field)
+                                <div
+                                    class="form-check p-3 border border-dashed border-secondary rounded cursor-pointer clip-checked min-w-[200px]">
+                                    <input type="checkbox" id="{{ $field->id }}" class="form-check-input" />
+                                    <label for="{{ $field->id }}" class="form-check-label">
+                                        <span class="ms-2">{{ $field->label }}</span>
+                                    </label>
+                                </div>
+                            @empty
+                                <x-no-data.no-data-component />
+                            @endforelse
                         </div>
-
-
 
                     </div>
                     <div class="box-footer hidden border-t-0">

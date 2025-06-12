@@ -1,20 +1,19 @@
 @extends('layouts.auth')
 
-@section('title', 'Sign In')
+@section('title', 'Sign Up')
 
 @section('content')
-    <div class="flex items-center justify-center authentication">
-        <div class="md:max-w-[75%] my-3 mx-auto xl:!m-0 max-w-[90%]">
-            <div
-                class="grid grid-cols-12  authentication-cover-main mx-0 border border-defaultborder dark:border-defaultborder/10 rounded bg-white dark:bg-bodybg">
-                <div class="xxl:col-span-6 xl:col-span-5 lg:col-span-12 col-span-12 xl:block hidden px-0">
-                    <div class="authentication-cover overflow-hidden">
+    <div class="flex items-center justify-center authentication overflow-hidden">
+        <div class="md:max-w-[100%] my-3 mx-auto xl:!m-0 max-w-[100%]">
+            <div class="grid grid-cols-12  authentication-cover-main mx-0 bg-white dark:bg-bodybg h-screen">
+                <div class="xxl:col-span-8 xl:col-span-8 lg:col-span-12 col-span-12 xl:block hidden px-0">
+                    <div class="authentication-cover overflow-hidden h-screen">
                         <div class="authentication-cover-bg">
-                            <img src="{{ asset('/assets/images/media/svg/pattren-3.svg') }}" alt="">
+                            <img src="http://localhost:8000/assets/images/media/svg/pattren-3.svg" alt="">
                         </div>
                         <div class="authentication-cover-logo">
                             <a aria-label="anchor" href="index.html">
-                                <img src="{{ asset('/assets/images/brand-logos/desktop-dark.png') }}" alt=""
+                                <img src="http://localhost:8000/assets/images/brand-logos/desktop-dark.png" alt=""
                                     class="authentication-brand desktop-dark">
                             </a>
                         </div>
@@ -24,7 +23,8 @@
                                 <div class="xxl:col-span-10 xl:col-span-12 col-span-12">
                                     <div class="rounded-[0.3rem] bg-white-transparent authentication-sub-content">
                                         <div class="flex items-center justify-center">
-                                            <img src="{{ asset('/assets/images/media/media-80.png') }}" alt="img">
+                                            <img src="http://localhost:8000/assets/images/media/media-80.png"
+                                                alt="img">
                                         </div>
                                         <h6 class="mt-3 text-fixed-white font-semibold text-center leading-[1.2]">
                                             "Photography is a way of feeling, of touching, of loving. What you have caught
@@ -36,14 +36,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="xxl:col-span-6 xl:col-span-7 col-span-12">
-                    <div class="grid grid-cols-12 justify-center items-center h-full">
-                        <div class="xxl:col-span-2 xl:col-span-1 lg:col-span-12 md:col-span-12 sm:col-span-12 col-span-12">
-                        </div>
-                        <div class="xxl:col-span-8 xl:col-span-10 lg:col-span-12 md:col-span-12 sm:col-span-12 col-span-12">
+                <div class="xxl:col-span-4 xl:col-span-4 col-span-12">
+                    <div class="grid grid-cols-12 justify-center items-center h-screen overflow-y-auto scrollbar-thin [scrollbar-gutter:stable]">
+
+                        <div class="xxl:col-span-12 xl:col-span-12 lg:col-span-12 md:col-span-12 sm:col-span-12 col-span-12">
                             <div class="box !shadow-none my-auto">
-                                <form action="{{ route('login.validate') }}" method="POST">
-                                    @csrf
+                                <form action="http://localhost:8000/login" method="POST">
+                                    <input type="hidden" name="_token" value="OUgkGyvfOQ1m66hZsHwC3nm5VCFr26HlgSoyHixW"
+                                        autocomplete="off">
                                     <div class="box-body p-[3rem] py-3 min-w-[90dvw] sm:min-w-[400px]">
                                         <div class="flex items-center justify-center mb-4">
                                             <span class="auth-icon">
@@ -78,24 +78,17 @@
                                                 </svg>
                                             </span>
                                         </div>
-                                        <p class="h4 !font-semibold !mb-0 text-center">Sign In</p>
+                                        <p class="h4 !font-semibold !mb-0 text-center">Sign Up</p>
                                         <p class="!mb-0 text-textmuted dark:text-textmuted/50 !font-normal text-center">
-                                            Welcome
-                                            back !</p>
+                                            Getting Started!</p>
                                         <div class="grid grid-cols-12 gap-y-3">
                                             <div class="xl:col-span-12 col-span-12">
                                                 <label for="signup-auth-uid" class="ti-form-label text-dark">User Id</label>
                                                 <div class="relative">
-                                                    <input type="text"
-                                                        class="form-control form-control-lg @error('auth_uid') invalid @enderror"
+                                                    <input type="text" class="form-control form-control-lg "
                                                         id="signup-auth-uid" placeholder="Enter User Id" name="auth_uid"
-                                                        value="{{ old('auth_uid') }}">
+                                                        value="" fdprocessedid="mezsgs">
                                                 </div>
-                                                @error('auth_uid')
-                                                    <small class="validation-error">
-                                                        {{ $message }}
-                                                    </small>
-                                                @enderror
 
                                             </div>
                                             <div class="xl:col-span-12 col-span-12 mb-2">
@@ -105,20 +98,15 @@
                                                         class="float-end link-danger opacity-50 !font-medium text-xs">Forget
                                                         password ?</a></label>
                                                 <div class="relative">
-                                                    <input type="password"
-                                                        class="form-control form-control-lg @error('password') password invalid @enderror"
-                                                        id="signin-password" placeholder="password" name="password">
+                                                    <input type="password" class="form-control form-control-lg "
+                                                        id="signin-password" placeholder="password" name="password"
+                                                        fdprocessedid="bspvam">
                                                     <a aria-label="anchor" href="javascript:void(0);"
                                                         class="show-password-button text-textmuted dark:text-textmuted/50"
                                                         onclick="createpassword('signin-password',this)"
                                                         id="button-addon2"><i
                                                             class="ri-eye-off-line align-middle"></i></a>
                                                 </div>
-                                                @error('password')
-                                                    <small class="validation-error">
-                                                        {{ $message }}
-                                                    </small>
-                                                @enderror
 
                                                 <div class="mt-2">
                                                     <div class="form-check">
@@ -137,7 +125,8 @@
                                         @include('auth.partials.social_media_logins')
 
                                         <div class="grid mt-4">
-                                            <button type="submit" class="ti-btn ti-btn-primary ti-btn-lg">Sign
+                                            <button type="submit" class="ti-btn ti-btn-primary ti-btn-lg"
+                                                fdprocessedid="2kaecf">Sign
                                                 In</button>
                                         </div>
                                         <div class="text-center mb-0">
@@ -149,12 +138,10 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="xxl:col-span-2 xl:col-span-1 lg:col-span-12 md:col-span-12 sm:col-span-12 col-span-12">
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 @endsection

@@ -40,3 +40,7 @@ textarea.invalid:focus {
 .clip-checked.active input[type="checkbox"]:disabled~.clip-checked.active label {
     color: var(--primary) !important;
 }
+
+.scrollbar-thin{
+    scrollbar-width: thin;
+}
