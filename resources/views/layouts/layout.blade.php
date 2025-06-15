@@ -12,8 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="Author" content="{{ config('app.name') }}">
     <meta name="Description" content="">
-    <meta name="keywords"
-        content="{{ config('app.name') }}, {{ config('app.url') }}">
+    <meta name="keywords" content="{{ config('app.name') }}, {{ config('app.url') }}">
 
     <!-- Title-->
     <title> @yield('title') | {{ config('app.name') }} </title>
@@ -45,6 +44,9 @@
     <!-- FlatPickr CSS -->
     <link rel="stylesheet" href="{{ asset('/assets/libs/flatpickr/flatpickr.min.css') }}">
 
+    <!-- intl-tel-input css -->
+    <link rel="stylesheet" href="{{ asset('/assets/libs/intl-tel-input/build/css/intlTelInput.css') }}">
+
     <!-- Auto Complete CSS -->
     <link rel="stylesheet" href="{{ asset('/assets/libs/%40tarekraafat/autocomplete.js/css/autoComplete.css') }}">
 
@@ -54,6 +56,12 @@
 
     <!-- FlatPickr CSS -->
     <link rel="stylesheet" href="{{ asset('/assets/libs/flatpickr/flatpickr.min.css') }}">
+
+    <!-- Tagify CSS -->
+    <link rel="stylesheet" href="{{ asset('/assets/libs/@yaireo/tagify/tagify.css') }}">
+
+    <!-- Dragsort CSS -->
+    <link rel="stylesheet" href="{{ asset('/assets/libs/@yaireo/dragsort/dragsort.css') }}">
 
     @routes
 
@@ -580,7 +588,6 @@
     <!-- Date & Time Picker JS -->
     <script src="{{ asset('/assets/libs/flatpickr/flatpickr.min.js') }}"></script>
 
-
     <!-- Apex Charts JS -->
     <script src="{{ asset('/assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
@@ -588,15 +595,31 @@
     <link rel="modulepreload" href="{{ asset('/assets/sales-dashboard-kn0sa7YP.js') }}" />
     <script type="module" src="{{ asset('/assets/sales-dashboard-kn0sa7YP.js') }}"></script>
 
+    <!-- Tagify JS -->
+    <script src="{{ asset('/assets/libs/%40yaireo/tagify/tagify.js') }}"></script>
+    <script src="{{ asset('/assets/tagify-B7A5Iz0J.js') }}"></script>
+
+    <!-- intl-tel-input JS -->
+    <script src="{{ asset('/assets/libs/intl-tel-input/build/js/intlTelInput.min.js') }}"></script>
+
+
+    <!-- Drag & Drop JS -->
+    <script src="{{ asset('/assets/libs/@yaireo/dragsort/dragsort.js') }}"></script>
+
     <!-- Sticky JS -->
     <script src="{{ asset('/assets/sticky.js') }}"></script>
+
+    <!-- Form Advance -->
+    <script src="{{ asset('/assets/form-advanced-BW6Vop62.js') }}"></script>
 
     <!-- Custom-Switcher JS -->
     <link rel="modulepreload" href="{{ asset('/assets/custom-switcher-BgkrlHyM.js') }}" />
     <script type="module" src="{{ asset('/assets/custom-switcher-BgkrlHyM.js') }}"></script>
+
     <!-- App JS-->
     <link rel="modulepreload" href="{{ asset('/assets/app-DQ-BRFdc.js') }}" />
     <script type="module" src="{{ asset('/assets/app-DQ-BRFdc.js') }}"></script>
+
     <!-- END Scripts -->
 
     @yield('scripts')

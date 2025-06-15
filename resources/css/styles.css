@@ -37,10 +37,8 @@ textarea.invalid:focus {
     background-color: rgb(var(--primary) / .15);
     border:1px dashed rgb(var(--primary));
 }
-.clip-checked.active input[type="checkbox"]:disabled~.clip-checked.active label {
-    color: var(--primary) !important;
-}
 
-.scrollbar-thin{
-    scrollbar-width: thin;
+.clip-checked:has(input[type="checkbox"]:checked) {
+    background-color: rgb(var(--primary) / .15);
+    border: 1px dashed rgb(var(--primary));
 }

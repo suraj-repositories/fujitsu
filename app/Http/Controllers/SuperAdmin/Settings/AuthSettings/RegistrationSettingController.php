@@ -15,6 +15,7 @@ class RegistrationSettingController extends Controller
             $query->orderBy('order');
         }])->where('name', 'registration')->firstOrFail();
 
+
         return view('super_admin.settings.auth.registration_settings', compact('form'));
     }
 

@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::create('form_fields', function (Blueprint $table) {
             $table->id();
             $table->foreignId('form_id')->constrained('forms')->onDelete('cascade');
+            $table->string('default_label')->nullable();
             $table->string('label');
             $table->string('name');
             $table->string('type');
             $table->boolean('enabled')->default(true);
+            $table->json('options')->nullable();
             $table->json('validation_rules')->nullable();
             $table->integer('order')->default(0);
             $table->timestamps();

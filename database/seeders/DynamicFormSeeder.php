@@ -24,10 +24,12 @@ class DynamicFormSeeder extends Seeder
                 FormField::updateOrCreate(
                     ['form_id' => $form->id, 'name' => $name],
                     [
+                        'default_label' => $fieldData['label'],
                         'label' => $fieldData['label'],
                         'type' => $fieldData['type'],
                         'enabled' => true,
                         'order' => $order++,
+                        'options' => $fieldData['options'] ?? null,
                         'validation_rules' => $this->getValidationRules($name, $fieldData),
                     ]
                 );

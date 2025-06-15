@@ -9,6 +9,7 @@ class FormField extends Model
     //
     protected $fillable = [
         'form_id',
+        'default_label',
         'label',
         'name',
         'type',

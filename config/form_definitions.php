@@ -6,10 +6,21 @@ return [
     'registration' => [
         'title' => 'Registration',
         'fields' => [
+            'referral_id' => [
+                'label' => 'Referral ID',
+                'type' => 'text',
+                'validation_rules' => ['required', 'exists:users,id'],
+            ],
             'name_prefix' => [
                 'label' => 'Name Prefix',
                 'type' => 'text',
-                'validation_rules' => ['required'],
+                'options' => [
+                    'Mr' => 'Mr',
+                    'Ms' => 'Ms',
+                    'Mrs' => 'Mrs',
+                    'Dr' => 'Dr',
+                ],
+                'validation_rules' => ['required', 'in:Mr,Ms,Mrs,Dr'],
             ],
             'first_name' => [
                 'label' => 'First Name',
@@ -47,6 +58,16 @@ return [
                     'regex:/^[0-9+\-\s()]*$/'
                 ],
             ],
+            'gender' => [
+                'label' => 'Gender',
+                'type' => 'select',
+                'options' => [
+                    'male' => 'Male',
+                    'female' => 'Female',
+                    'other' => 'Other',
+                ],
+                'validation_rules' => ['required', 'in:male,female,other'],
+            ],
             'password' => [
                 'label' => 'Password',
                 'type' => 'password',
@@ -59,6 +80,11 @@ return [
                 'label' => 'Confirm Password',
                 'type' => 'password',
                 'validation_rules' => ['required', 'same:password'],
+            ],
+            'terms' => [
+                'label' => 'Terms and Conditions',
+                'type' => 'checkbox',
+                'validation_rules' => ['required', 'accepted'],
             ],
         ],
         'submit_button_text' => 'Register',

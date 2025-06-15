@@ -3,11 +3,7 @@
     <div class="container">
         <span class="text-textmuted dark:text-textmuted/50">
             Copyright © <span id="year"></span>
-            <a href="javascript:void(0);" class="text-dark font-medium dark:text-defaulttextcolor/80">Zynix</a>.
-            Designed with <span class="bi bi-heart-fill text-danger"></span> by
-            <a href="https://spruko.com/" target="_blank">
-                <span class="font-medium text-primary">Spruko</span>
-            </a>
+            <a href="javascript:void(0);" class="text-dark font-medium dark:text-defaulttextcolor/80">{{ config('app.name') }}</a> |
             All rights reserved
         </span>
     </div>

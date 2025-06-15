@@ -54,28 +54,32 @@ class Form {
         });
     }
 
-    enableClipChecked() {
-        const clips = document.querySelectorAll('.clip-checked');
-        clips.forEach(clip => {
+ enableClipChecked() {
+    const clips = document.querySelectorAll('.clip-checked');
 
-            const checkbox = clip.querySelector('input[type="checkbox"]');
-            if (checkbox) {
-                if(checkbox.disabled){
-                    return;
-                }
+    clips.forEach(clip => {
+        const checkbox = clip.querySelector('input[type="checkbox"]');
+        if (!checkbox || checkbox.disabled) return;
 
-                checkbox.addEventListener('change', () => {
-                    clip.classList.toggle('active', checkbox.checked);
-                });
-            }
-            clip.addEventListener('click', () => {
-                clip.classList.toggle('active');
-                const input = clip.querySelector('input[type="checkbox"]');
-                if (input) {
-                    input.checked = !input.checked;
-                }
-            });
+        if (checkbox.checked) {
+            clip.classList.add('active');
+        }
+
+        checkbox.addEventListener('change', () => {
+            clip.classList.toggle('active', checkbox.checked);
         });
-    }
+
+        clip.addEventListener('click', e => {
+            if (e.target === checkbox || clip.querySelector('label')?.contains(e.target)) {
+                return;
+            }
+
+            checkbox.checked = !checkbox.checked;
+            checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+        });
+    });
+}
+
+
 
 }
