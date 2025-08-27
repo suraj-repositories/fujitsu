@@ -16,8 +16,11 @@ class AuthController extends Controller
     {
 
         // return view("auth.login.card_login");
+
         // return view("auth.login.cover_login");
-        return view("auth.login.full_cover_login");
+
+        $direction = "ltr";
+        return view("auth.login.full_cover_login", compact('direction'));
     }
 
     public function registerPage()
