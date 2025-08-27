@@ -42,3 +42,10 @@ textarea.invalid:focus {
     background-color: rgb(var(--primary) / .15);
     border: 1px dashed rgb(var(--primary));
 }
+
+
+.theme-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}

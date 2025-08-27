@@ -14,7 +14,10 @@ class AuthController extends Controller
 
     public function loginPage()
     {
-        return view("auth.login.cover_login");
+
+        // return view("auth.login.card_login");
+        // return view("auth.login.cover_login");
+        return view("auth.login.full_cover_login");
     }
 
     public function registerPage()

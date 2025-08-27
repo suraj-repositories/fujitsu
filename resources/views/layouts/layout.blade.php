@@ -63,6 +63,7 @@
     <!-- Dragsort CSS -->
     <link rel="stylesheet" href="{{ asset('/assets/libs/@yaireo/dragsort/dragsort.css') }}">
 
+    <link rel="stylesheet" href="{{ asset('/custom/css/styles.css') }}" />
     @routes
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -620,6 +621,7 @@
     <link rel="modulepreload" href="{{ asset('/assets/app-DQ-BRFdc.js') }}" />
     <script type="module" src="{{ asset('/assets/app-DQ-BRFdc.js') }}"></script>
 
+    <script  src="{{ asset('/custom/js/script.js') }}"></script>
     <!-- END Scripts -->
 
     @yield('scripts')
