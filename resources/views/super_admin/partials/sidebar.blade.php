@@ -81,6 +81,9 @@
                          <li class="slide">
                              <a href="{{ route('superadmin.settings.auth.registration.index') }}" class="side-menu__item">Registration</a>
                          </li>
+                         <li class="slide">
+                             <a href="{{ route('superadmin.settings.auth.theme-settings.index') }}" class="side-menu__item">Auth Theme</a>
+                         </li>
                          <li class="slide has-sub">
                              <a href="javascript:void(0);" class="side-menu__item">Create Password
                                  <i class="ri-arrow-right-s-line side-menu__angle"></i></a>

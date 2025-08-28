@@ -49,3 +49,11 @@ textarea.invalid:focus {
     max-width: 300px;
     height: auto;
 }
+
+.theme-box{
+    filter: grayscale(1);
+}
+
+.theme-box.checked-grayscale{
+    filter: grayscale(0);
+}

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\AuthTheme;
 use App\Models\Form;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -14,13 +15,16 @@ class AuthController extends Controller
 
     public function loginPage()
     {
+        $appliedTheme = config('initial_data.login_themes')[0];
 
-        // return view("auth.login.card_login");
+        $dbAppliedTheme = AuthTheme::where('is_applied', true)->where('type', 'login')->first();
+        if($dbAppliedTheme){
+            $appliedTheme = $dbAppliedTheme->toArray();
+        }
 
-        // return view("auth.login.cover_login");
-
-        $direction = "ltr";
-        return view("auth.login.full_cover_login", compact('direction'));
+        return view($appliedTheme['view'], [
+            'direction' => $appliedTheme['direction'] ?? null
+        ]);
     }
 
     public function registerPage()

@@ -43,11 +43,15 @@
 
                         <h6 class="mb-3 font-bold"></h6>
 
-                        <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 ">
-                            <div class="relative">
-                                <img src="{{ asset('assets/images/themes/login-1.png') }}" class="theme-img">
-                                <input type="checkbox" class="form-check-input absolute top-2 right-2">
-                            </div>
+                        <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 themes-container">
+
+                            @foreach ($loginThemes as $loginTheme)
+                                <div class="relative theme-box cursor-pointer" >
+                                    <img src="{{ asset($loginTheme->image_path) }}" class="theme-img">
+                                    <input type="checkbox" data-enable-id="{{ $loginTheme->id }}" class="form-check-input absolute top-2 right-2">
+                                </div>
+                            @endforeach
+
                         </div>
 
                     </div>
@@ -63,3 +67,4 @@
 
     </div>
 @endsection
+

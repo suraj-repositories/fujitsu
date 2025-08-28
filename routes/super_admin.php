@@ -12,6 +12,7 @@ Route::prefix('/settings')->name('settings.')->group(function(){
 
     Route::get('/auth/registration', [RegistrationSettingController::class, 'index'])->name('auth.registration.index');
     Route::get('/auth/theme-settings', [AuthThemeController::class, 'index'])->name('auth.theme-settings.index');
+    Route::post('/auth/theme-settings/change', [AuthThemeController::class, 'changeTheme'])->name('auth.theme-settings.change.index');
 });
 
 
