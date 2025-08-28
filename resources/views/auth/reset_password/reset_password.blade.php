@@ -1,6 +1,6 @@
 @extends('layouts.auth')
 
-@section('title', 'Sign In')
+@section('title', 'Forgot Password')
 
 @section('content')
     <div class="container">
@@ -15,8 +15,10 @@
                 </div>
                 <div class="box my-4 border z-10 relative border-defaultborder dark:border-defaultborder/10">
                     <div class="box-body p-0">
-                        <form action="{{ route('login.validate') }}" method="POST">
+                        <form action="{{ route('password.update') }}" method="POST">
                             @csrf
+                              <input type="hidden" name="token" value="{{ $token }}">
+                                <input type="hidden" name="email" value="{{ $email }}">
                             <div class="p-[3rem]">
                                 <div class="flex items-center justify-center mb-3">
                                     <span class="auth-icon">
@@ -51,67 +53,49 @@
                                         </svg>
                                     </span>
                                 </div>
-                                <p class="h4 !font-semibold !mb-0 text-center">Sign In</p>
-                                <p class="!mb-3 text-textmuted dark:text-textmuted/50  font-normal text-center">Welcome back
-                                    Jhon !</p>
-
-                                      @include('layouts.alert')
-
+                                <p class="h4 !font-semibold !mb-0 text-center">Reset Password</p>
+                                <p class="!mb-3 text-textmuted dark:text-textmuted/50  font-normal text-center">One last step to
+                                    reset your password!</p>
                                 <div class="grid grid-cols-12 gap-y-3">
                                     <div class="xl:col-span-12 col-span-12">
-                                        <label for="signup-firstname" class="ti-form-label text-dark">User Name</label>
+                                        <label for="signup-firstname" class="ti-form-label text-dark">Password</label>
                                         <div class="relative">
                                             <input type="text"
-                                                class="form-control form-control-lg @error('auth_uid') invalid @enderror"
-                                                id="signup-auth-uid" placeholder="Enter User Id" name="auth_uid"
-                                                value="{{ old('auth_uid') }}">
-                                        </div>
-                                        @error('auth_uid')
-                                            <small class="validation-error">
-                                                {{ $message }}
-                                            </small>
-                                        @enderror
-                                    </div>
-                                    <div class="xl:col-span-12 col-span-12 mb-2">
-                                        <label for="signin-password" class="ti-form-label text-dark block">Password<a
-                                                href="{{ route('password.request') }}"
-                                                class="float-end  link-danger opacity-50 font-medium text-xs">Forget
-                                                password ?</a></label>
-                                        <div class="relative">
-                                            <input type="password"
-                                                class="form-control form-control-lg @error('password') password invalid @enderror"
-                                                id="signin-password" placeholder="password" name="password">
-                                            <a aria-label="anchor" href="javascript:void(0);"
-                                                class="show-password-button text-textmuted dark:text-textmuted/50"
-                                                onclick="createpassword('signin-password',this)" id="button-addon2"><i
-                                                    class="ri-eye-off-line align-middle"></i></a>
+                                                class="form-control form-control-lg @error('password') invalid @enderror"
+                                                id="password" placeholder="Enter Password" name="password"
+                                                value="{{ old('password') }}">
                                         </div>
                                         @error('password')
                                             <small class="validation-error">
                                                 {{ $message }}
                                             </small>
                                         @enderror
-                                        <div class="mt-2">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="defaultCheck1">
-                                                <label
-                                                    class="form-check-label text-textmuted dark:text-textmuted/50 font-normal text-xs"
-                                                    for="defaultCheck1">
-                                                    Remember password ?
-                                                </label>
-                                            </div>
-                                        </div>
                                     </div>
-                                </div>
-                                @include('auth.partials.social_media_logins')
+                                    <div class="xl:col-span-12 col-span-12">
+                                        <label for="signup-firstname" class="ti-form-label text-dark">Confirm Password</label>
+                                        <div class="relative">
+                                            <input type="text"
+                                                class="form-control form-control-lg @error('password_confirmation') invalid @enderror"
+                                                id="password_confirmation" placeholder="Re-type Password" name="password_confirmation"
+                                                value="{{ old('password_confirmation') }}">
+                                        </div>
+                                        @error('password_confirmation')
+                                            <small class="validation-error">
+                                                {{ $message }}
+                                            </small>
+                                        @enderror
+                                    </div>
 
+                                </div>
+                                @if (session('status'))
+                                    <p>{{ session('status') }}</p>
+                                @endif
                                 <div class="grid mt-4">
-                                    <button type="submit" class="ti-btn ti-btn-primary ti-btn-lg">Sign In</button>
+                                    <button type="submit" class="ti-btn ti-btn-primary ti-btn-lg">Reset Password</button>
                                 </div>
                                 <div class="text-center mb-0">
-                                    <p class="text-textmuted dark:text-textmuted/50 mt-3 mb-0">Dont have an account? <a
-                                            href="sign-up-basic.html" class="text-primary">Sign Up</a></p>
+                                    <p class="text-textmuted dark:text-textmuted/50 mt-3 mb-0">Already have credentials? <a
+                                            href="{{ route('login') }}" class="text-primary">Sign In</a></p>
                                 </div>
                             </div>
                         </form>

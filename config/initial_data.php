@@ -28,5 +28,35 @@ return [
                 'image_path' =>  '/assets/images/themes/full_cover_rtl.png',
                 'direction' => 'rtl'
             ],
+        ],
+        'forgot_password_themes' => [
+            [
+                'type' => 'forgot-password',
+                'title' => 'Basic',
+                'view' => 'auth.forgot_password.forgot_password_basic',
+                'image_path' => '/assets/images/themes/forgot-password-basic.png',
+                'is_applied' => true,
+            ],
+            [
+                'type' => 'forgot-password',
+                'title' => 'Cover',
+                'view' => 'auth.forgot_password.forgot_password_cover',
+                'image_path' => '/assets/images/themes/forgot-password-cover.png',
+
+            ],
+            [
+                'type' => 'forgot-password',
+                'title' => 'Full Cover LTR',
+                'view' => 'auth.forgot_password.forgot_password_full_cover',
+                'image_path' => '/assets/images/themes/forgot-password-full-cover-ltr.png',
+                 'direction' => 'ltr'
+            ],
+            [
+                'type' => 'forgot-password',
+                'title' => 'Full Cover RTL',
+                'view' => 'auth.forgot_password.forgot_password_full_cover',
+                'image_path' => '/assets/images/themes/forgot-password-full-cover-rtl.png',
+                 'direction' => 'rtl'
+            ],
         ]
     ];

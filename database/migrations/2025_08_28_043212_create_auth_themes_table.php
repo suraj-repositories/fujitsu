@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('auth_themes', function (Blueprint $table) {
             $table->id();
             $table->enum('type', ['login', 'register', 'forgot-password'])->nullable(false);
-            $table->string('title')->unique();
+            $table->string('title')->nullable(false);
             $table->string('view')->nullable(false);
             $table->string('image_path')->nullable();
             $table->enum('direction' , ['ltr', 'rtl'])->nullable();

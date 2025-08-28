@@ -1,6 +1,7 @@
 @auth
     Role : {{ Auth::user()->hasRole('user') ? 'User' : (Auth::user()->hasRole('admin') ? 'admin' : 'superadmin') }}<br>
-    <form action="{{ route('logout') }}" method="post"><button type="submit">LOGOUT</button></form>
+    <form action="{{ route('logout') }}" method="post">
+        @csrf<button type="submit">LOGOUT</button></form>
 @endauth
 
 @guest

@@ -1,6 +1,6 @@
 @extends('layouts.auth')
 
-@section('title', 'Sign Up')
+@section('title', 'Sign In')
 
 @section('content')
 
@@ -9,7 +9,8 @@
         <div class="md:max-w-[100%] m-0 sm:my-3 mx-auto xl:!m-0 max-w-[100%]">
 
             <div class="grid grid-cols-12  authentication-cover-main mx-0 bg-white dark:bg-bodybg h-screen">
-                <div class="xxl:col-span-8 xl:col-span-8 lg:col-span-12 col-span-12 xl:block hidden px-0 order-{{ (!empty($direction) && $direction  == 'ltr') ? '2' : '1' }}">
+                <div
+                    class="xxl:col-span-8 xl:col-span-8 lg:col-span-12 col-span-12 xl:block hidden px-0 order-{{ !empty($direction) && $direction == 'ltr' ? '2' : '1' }}">
                     <div class="authentication-cover overflow-hidden h-screen">
                         <div class="authentication-cover-bg">
                             <img src="{{ asset('assets/images/media/svg/pattren-3.svg') }}" alt="">
@@ -38,7 +39,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="xxl:col-span-4 xl:col-span-4 col-span-12 order-{{ (!empty($direction) && $direction  == 'ltr') ? '1' : '2' }}">
+                <div
+                    class="xxl:col-span-4 xl:col-span-4 col-span-12 order-{{ !empty($direction) && $direction == 'ltr' ? '1' : '2' }}">
                     <div
                         class="grid grid-cols-12 justify-center items-center h-screen overflow-y-auto scrollbar-thin [scrollbar-gutter:stable]">
 
@@ -85,6 +87,9 @@
                                         <p class="!mb-0 text-textmuted dark:text-textmuted/50 !font-normal text-center">
                                             Welcome
                                             back !</p>
+
+                                        @include('layouts.alert')
+
                                         <div class="grid grid-cols-12 gap-y-3">
                                             <div class="xl:col-span-12 col-span-12">
                                                 <label for="signup-auth-uid" class="ti-form-label text-dark">User Id</label>

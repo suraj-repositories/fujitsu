@@ -18,7 +18,16 @@ class AuthThemeSeeder extends Seeder
 
         foreach ($data as $theme) {
             AuthTheme::updateOrCreate(
-                ['title' => $theme['title']],
+                ['title' => $theme['title'], 'type' => $theme['type']],
+                $theme
+            );
+        }
+
+        $fdata = config('initial_data.forgot_password_themes');
+
+        foreach ($fdata as $theme) {
+            AuthTheme::updateOrCreate(
+                ['title' => $theme['title'], 'type' => $theme['type']],
                 $theme
             );
         }

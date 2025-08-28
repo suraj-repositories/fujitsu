@@ -78,9 +78,9 @@
                          <i class="ri-arrow-right-s-line side-menu__angle"></i>
                      </a>
                      <ul class="slide-menu child1">
-                         <li class="slide">
+                         {{-- <li class="slide">
                              <a href="{{ route('superadmin.settings.auth.registration.index') }}" class="side-menu__item">Registration</a>
-                         </li>
+                         </li> --}}
                          <li class="slide">
                              <a href="{{ route('superadmin.settings.auth.theme-settings.index') }}" class="side-menu__item">Auth Theme</a>
                          </li>

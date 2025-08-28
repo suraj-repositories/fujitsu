@@ -15,7 +15,6 @@
                         <li class="breadcrumb-item active" aria-current="page">Auth Theme Settings</li>
                     </ol>
                 </nav>
-
             </div>
             <div class="flex flex-wrap gap-2">
                 <a href="javascript:void(0);" class="ti-btn ti-btn-soft-info btn-wave  waves-effect waves-light me-2 m-0">
@@ -31,6 +30,7 @@
         <!-- Start:: row-1 -->
         <div class="grid grid-cols-12 gap-x-6">
             <div class="xl:col-span-12 col-span-12">
+
                 <div class="box">
                     <div class="box-header justify-between">
                         <div class="box-title">
@@ -40,25 +40,39 @@
                         </div>
                     </div>
                     <div class="box-body">
-
                         <h6 class="mb-3 font-bold"></h6>
-
-                        <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 themes-container">
-
+                        <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 login-themes-container">
                             @foreach ($loginThemes as $loginTheme)
-                                <div class="relative theme-box cursor-pointer" >
+                                <div class="relative theme-box cursor-pointer @if($loginTheme->is_applied) checked-grayscale checked-border @endif" >
                                     <img src="{{ asset($loginTheme->image_path) }}" class="theme-img">
-                                    <input type="checkbox" data-enable-id="{{ $loginTheme->id }}" class="form-check-input absolute top-2 right-2">
+                                    <input type="checkbox" data-enable-id="{{ $loginTheme->id }}" class="form-check-input absolute top-2 right-2" @if($loginTheme->is_applied) checked @endif>
                                 </div>
                             @endforeach
-
                         </div>
-
-                    </div>
-                    <div class="box-footer hidden border-t-0">
-
                     </div>
                 </div>
+
+                <div class="box">
+                    <div class="box-header justify-between">
+                        <div class="box-title">
+                            Forgot-Password Themes
+                        </div>
+                        <div class="prism-toggle">
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <h6 class="mb-3 font-bold"></h6>
+                        <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 forgot-password-themes-container">
+                            @foreach ($forgotPasswordThemes as $loginTheme)
+                                <div class="relative theme-box cursor-pointer @if($loginTheme->is_applied) checked-grayscale checked-border @endif" >
+                                    <img src="{{ asset($loginTheme->image_path) }}" class="theme-img">
+                                    <input type="checkbox" data-enable-id="{{ $loginTheme->id }}" class="form-check-input absolute top-2 right-2" @if($loginTheme->is_applied) checked @endif>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
         <!-- End:: row-1 -->

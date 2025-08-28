@@ -68,6 +68,7 @@
     @routes
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @include('sweetalert2::index')
 
     @yield('styles')
 

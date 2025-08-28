@@ -12,7 +12,8 @@ class AuthThemeController extends Controller
     public function index()
     {
         return view('super_admin.settings.auth.auth_theme_settings', [
-            'loginThemes' => AuthTheme::where('type', 'login')->get()
+            'loginThemes' => AuthTheme::where('type', 'login')->get(),
+            'forgotPasswordThemes' => AuthTheme::where('type', 'forgot-password')->get(),
         ]);
     }
 

@@ -82,6 +82,9 @@
                                         <p class="!mb-0 text-textmuted dark:text-textmuted/50 !font-normal text-center">
                                             Welcome
                                             back !</p>
+
+                                        @include('layouts.alert')
+
                                         <div class="grid grid-cols-12 gap-y-3">
                                             <div class="xl:col-span-12 col-span-12">
                                                 <label for="signup-auth-uid" class="ti-form-label text-dark">User Id</label>
