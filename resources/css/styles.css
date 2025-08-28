@@ -52,10 +52,18 @@ textarea.invalid:focus {
 
 .theme-box{
     filter: grayscale(1);
-    min-height: 110px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: rgba(212, 212, 212, 0.281);
+    border: none;
 }
 
 .theme-box.checked-grayscale{
     filter: grayscale(0);
+}
+.theme-box.checked-border{
+    border: 1px dashed rgb(var(--primary));
+    padding: 2px;
 }

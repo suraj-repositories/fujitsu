@@ -17,7 +17,7 @@
                     <div class="box-body p-0">
                         <form action="{{ route('login.validate') }}" method="POST">
                             @csrf
-                            <div class="p-[3rem]">
+                            <div class="p-[2rem]">
                                 <div class="flex items-center justify-center mb-3">
                                     <span class="auth-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="password">
@@ -53,7 +53,7 @@
                                 </div>
                                 <p class="h4 !font-semibold !mb-0 text-center">Sign In</p>
                                 <p class="!mb-3 text-textmuted dark:text-textmuted/50  font-normal text-center">Welcome back
-                                    Jhon !</p>
+                                     !</p>
 
                                       @include('layouts.alert')
 
