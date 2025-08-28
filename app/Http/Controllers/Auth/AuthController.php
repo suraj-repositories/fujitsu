@@ -29,21 +29,32 @@ class AuthController extends Controller
 
     public function registerPage()
     {
-         $form = Form::with(['fields' => function ($query) {
-            $query->where('enabled', true)->orderBy('order');
-        }])->where('name', 'registration')->firstOrFail();
+        // $form = Form::with(['fields' => function ($query) {
+        //     $query->where('enabled', true)->orderBy('order');
+        // }])->where('name', 'registration')->firstOrFail();
 
-        return view("auth.register.cover_register", compact('form'));
+        $appliedTheme = config('initial_data.register_themes')[0];
+
+        $dbAppliedTheme = AuthTheme::where('is_applied', true)->where('type', 'register')->first();
+        if($dbAppliedTheme){
+            $appliedTheme = $dbAppliedTheme->toArray();
+        }
+
+        return view($appliedTheme['view'], [
+            'direction' => $appliedTheme['direction'] ?? null
+        ]);
+
+        // return view("auth.register.cover_register");
     }
 
     public function login(Request $request)
     {
         $validated = $request->validate([
-            'auth_uid' => 'required|string|exists:users,userid',
+            'auth_uid' => 'required|string|exists:users,username',
             'password' => 'required|string|min:3',
         ]);
 
-        $user = User::where('userid', $validated['auth_uid'])->first();
+        $user = User::where('username', $validated['auth_uid'])->first();
 
         if (!Hash::check($validated['password'], $user->password)) {
             return redirect()->back()
@@ -77,21 +88,21 @@ class AuthController extends Controller
     {
 
         $validated = $request->validate([
-            'name' => 'required|min:3|max:255',
-            'terms' => 'required',
+            'username' => 'required|min:3|max:255|unique:users,username',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:3'
         ]);
 
         $user = User::create([
-            'name' => $validated['name'],
+            'username' => $validated['username'],
             'email' => $validated['email'],
-            'password' => Hash::make($validated['password']),
-            'role' => 'user'
+            'password' => Hash::make($validated['password'])
         ]);
 
-        Auth::login($user);
-        return redirect("/")->with('message', 'Regestration successful!');
+        $user->assignRole('user');
+
+        // Auth::login($user);
+        return redirect()->route('login')->with('success', 'Regestration successful! Login to continue.');
     }
 
     public function logout(Request $request)
@@ -103,5 +114,22 @@ class AuthController extends Controller
             return redirect()->route('login')->with('success', 'Logout successful!');
         }
         return redirect('/');
+    }
+
+    public function checkIfExists(Request $request)
+    {
+        if ($request->has('username')) {
+            $exists = User::where('username', $request->username)->exists();
+            return response()->json(['exists' => $exists]);
+        }
+
+        if ($request->has('email')) {
+            $exists = User::where('email', $request->email)->exists();
+            return response()->json(['exists' => $exists]);
+        }
+
+        return response()->json([
+            'error' => 'No username or email provided.'
+        ], 400);
     }
 }

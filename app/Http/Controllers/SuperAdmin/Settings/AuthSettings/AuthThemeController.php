@@ -13,6 +13,7 @@ class AuthThemeController extends Controller
     {
         return view('super_admin.settings.auth.auth_theme_settings', [
             'loginThemes' => AuthTheme::where('type', 'login')->get(),
+            'registerThemes' => AuthTheme::where('type', 'register')->get(),
             'forgotPasswordThemes' => AuthTheme::where('type', 'forgot-password')->get(),
         ]);
     }

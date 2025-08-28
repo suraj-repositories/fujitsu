@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Package MLM
+## Fujitsu
 
 ### Externals
 
@@ -22,4 +22,5 @@
 - [Ziggy](https://github.com/tighten/ziggy)
 - [Yajra DataTable](https://github.com/yajra/laravel-datatables)
 - [spatie/laravel-permission](https://spatie.be/docs/laravel-permission/v6/introduction)
+- [sweetalert2](https://github.com/sweetalert2/sweetalert2-laravel)
 

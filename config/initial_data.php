@@ -58,5 +58,35 @@ return [
                 'image_path' => '/assets/images/themes/forgot-password-full-cover-rtl.png',
                  'direction' => 'rtl'
             ],
+        ],
+        'register_themes' => [
+            [
+                'type' => 'register',
+                'title' => 'Basic',
+                'view' => 'auth.register.basic_register',
+                'image_path' => '/assets/images/themes/register-basic.png',
+                'is_applied' => true,
+            ],
+            [
+                'type' => 'register',
+                'title' => 'Cover',
+                'view' => 'auth.register.cover_register',
+                'image_path' => '/assets/images/themes/register-cover.png',
+
+            ],
+            [
+                'type' => 'register',
+                'title' => 'Full Cover LTR',
+                'view' => 'auth.register.full_cover_register',
+                'image_path' => '/assets/images/themes/register-full-cover-ltr.png',
+                 'direction' => 'ltr'
+            ],
+            [
+                'type' => 'register',
+                'title' => 'Full Cover RTL',
+                'view' => 'auth.register.full_cover_register',
+                'image_path' => '/assets/images/themes/register-full-cover-rtl.png',
+                 'direction' => 'rtl'
+            ],
         ]
     ];

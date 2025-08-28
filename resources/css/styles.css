@@ -46,12 +46,14 @@ textarea.invalid:focus {
 
 .theme-img {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     height: auto;
 }
 
 .theme-box{
     filter: grayscale(1);
+    min-height: 110px;
+    background: rgba(212, 212, 212, 0.281);
 }
 
 .theme-box.checked-grayscale{

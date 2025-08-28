@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
     {
         //
         $superAdmin = User::firstOrCreate([
-            'userid' => 'SUPER001',
+            'username' => 'SUPER001',
             'email' => 'superadmin@gmail.com',
             'password' => Hash::make('12345678'),
             'created_at' => now(),
@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
         $superAdmin->assignRole('super_admin');
 
         $admin = User::firstOrCreate([
-            'userid' => 'ADMIN001',
+            'username' => 'ADMIN001',
             'email' => 'admin@gmail.com',
             'password' => Hash::make('12345678'),
             'created_at' => now(),
@@ -35,7 +35,7 @@ class UserSeeder extends Seeder
         $admin->assignRole('admin');
 
         $user = User::firstOrCreate([
-            'userid' => 'USER001',
+            'username' => 'USER001',
             'email' => 'user@gmail.com',
             'password' => Hash::make('12345678'),
             'created_at' => now(),

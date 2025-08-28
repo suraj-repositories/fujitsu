@@ -12,6 +12,8 @@ Route::middleware('guest')->group(function () {
     Route::get('/register', [AuthController::class, 'registerPage'])->name('register');
     Route::post('/register', [AuthController::class, 'register'])->name('register.save');
 
+    Route::get('/register/exists', [AuthController::class, 'checkIfExists'])->name('register.exists');
+
     Route::get('/forgot-password', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
     Route::post('/forgot-password', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
 

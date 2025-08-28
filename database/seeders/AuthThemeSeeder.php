@@ -23,6 +23,15 @@ class AuthThemeSeeder extends Seeder
             );
         }
 
+        $rdata = config('initial_data.register_themes');
+
+        foreach ($rdata as $theme) {
+            AuthTheme::updateOrCreate(
+                ['title' => $theme['title'], 'type' => $theme['type']],
+                $theme
+            );
+        }
+
         $fdata = config('initial_data.forgot_password_themes');
 
         foreach ($fdata as $theme) {
