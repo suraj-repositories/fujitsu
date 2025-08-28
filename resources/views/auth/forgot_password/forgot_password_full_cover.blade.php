@@ -1,11 +1,10 @@
 @extends('layouts.auth')
 
-@section('title', 'Sign In')
+@section('title', 'Forgot Password')
 
 @section('content')
 
-
-    <div class="block items-center justify-center authentication overflow-hidden">
+  <div class="block items-center justify-center authentication overflow-hidden">
         <div class="md:max-w-[100%] m-0 sm:my-3 mx-auto xl:!m-0 max-w-[100%]">
 
             <div class="grid grid-cols-12  authentication-cover-main mx-0 bg-white dark:bg-bodybg h-screen">

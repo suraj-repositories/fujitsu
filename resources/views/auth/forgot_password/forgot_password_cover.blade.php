@@ -1,6 +1,6 @@
 @extends('layouts.auth')
 
-@section('title', 'Sign In')
+@section('title', 'Forgot Password')
 
 @section('content')
     <div class="flex items-center justify-center authentication">
